@@ -79,19 +79,14 @@ async function showSection(id, { force=false } = {}){
   const idx = sections.findIndex(s => s.id === id) + 1;
   const total = sections.length;
 
-  const swap = ()=>{
-    sections.forEach(s => s.classList.toggle('active', s.id === id));
-    setActiveTab(id);
-    if (posEl) posEl.textContent = `SECTION ${String(idx).padStart(2,'0')} / ${String(total).padStart(2,'0')}`;
-    const content = document.querySelector('.term-content');
-    if (content) content.scrollTop = 0;
-  };
-
-  if (document.startViewTransition && !REDUCED){
-    document.startViewTransition(swap);
-  } else {
-    swap();
-  }
+  // Instant swap: sidebar + terminal chrome stay still.
+  // Only the inner section content has a reveal-stagger animation
+  // (driven by the .section.active CSS rules).
+  sections.forEach(s => s.classList.toggle('active', s.id === id));
+  setActiveTab(id);
+  if (posEl) posEl.textContent = `SECTION ${String(idx).padStart(2,'0')} / ${String(total).padStart(2,'0')}`;
+  const content = document.querySelector('.term-content');
+  if (content) content.scrollTop = 0;
   currentId = id;
   await typePrompt(SECTION_CMDS[id] || `cat ${id}.md`);
 }
