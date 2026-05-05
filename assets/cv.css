@@ -21,18 +21,16 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 h1,h2,h3,h4{font-weight:700;margin:0}
 ul{margin:0;padding-left:18px}
 
-/* === View Transitions API (Chrome 111+, Safari 18+) === */
-@view-transition{navigation:auto}
-::view-transition-old(root),::view-transition-new(root){animation-duration:240ms;animation-timing-function:steps(8)}
-::view-transition-old(root){animation-name:vt-out}
-::view-transition-new(root){animation-name:vt-in}
-@keyframes vt-out{to{opacity:0;transform:translateY(-4px)}}
-@keyframes vt-in{from{opacity:0;transform:translateY(6px)}}
+/* === View Transitions API (Chrome 111+, Safari 18+) ===
+   Scope the swap to the section content area only.
+   Chrome (sidebar, term-bar, term-foot, prompt) stays still. */
+::view-transition-old(root),::view-transition-new(root){animation:none}
 
-/* per-element morphs */
-.term-bar{view-transition-name:term-bar}
-.term-foot{view-transition-name:term-foot}
-.sidebar .brand{view-transition-name:brand}
+.term-content{view-transition-name:section-area}
+::view-transition-old(section-area){animation:vt-out 220ms steps(6) forwards}
+::view-transition-new(section-area){animation:vt-in 260ms steps(8) forwards}
+@keyframes vt-out{to{opacity:0}}
+@keyframes vt-in{from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)}}
 
 /* === Type ramp === */
 .pixel{font-family:var(--pixel)}
