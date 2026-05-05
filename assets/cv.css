@@ -78,15 +78,18 @@ ul{margin:0;padding-left:18px}
 .list > *{border-bottom:2px dashed var(--dim);padding:7px 0}
 .list > *:last-child{border-bottom:none}
 
-.hrow{display:grid;grid-template-columns:1fr 180px;gap:14px;align-items:baseline;padding:5px 10px 5px 6px;border-bottom:1px dashed transparent}
-.role-bullets .hrow,.contact-grid .hrow{border-bottom-color:var(--dim)}
-.role-bullets .hrow:last-child,.contact-grid .hrow:last-child{border-bottom-color:transparent}
-.hrow > :first-child{position:relative;padding-left:18px}
-.hrow > :first-child::before{
-  content:"›";
-  position:absolute;left:2px;top:0;
-  color:var(--mid);
+.hrow{display:grid;grid-template-columns:1fr 180px;gap:14px;align-items:baseline;padding:9px 10px 9px 22px;border-bottom:2px dashed var(--dim);position:relative}
+.hrow:last-child{border-bottom:none}
+.role-bullets .hrow::before,
+.contact-grid .hrow::before{
+  content:"▸";
+  position:absolute;
+  left:4px;
+  top:7px;
+  color:var(--fg);
+  font-size:14px;
   font-weight:700;
+  line-height:1;
 }
 .hrow > :last-child{text-align:right;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--mid)}
 
