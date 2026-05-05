@@ -6,8 +6,8 @@ GitHub: https://github.com/sergiolinarescodes
 ## Resumen
 Senior Software Engineer con más de 12 años construyendo plataformas
 tipo SaaS en producción. Actualmente lidero servicios backend de FinOps
-en Maersk sobre Aurum, la plataforma que da soporte a la facturación de
-clientes enterprise de logística (hasta 50.000 M USD/año facturados).
+en Maersk: la plataforma multi-servicio que da soporte a la facturación
+de clientes enterprise de logística.
 Mi día a día son microservicios .NET event-driven, observabilidad
 end-to-end y Kubernetes, con responsabilidad directa sobre sistemas en
 evolución continua, impacto directo en cliente y decisiones técnicas
@@ -23,18 +23,17 @@ CI/CD, Quartz, React, TypeScript.
 
 ### Senior Software Engineer, Maersk · Nov 2021 a Actualidad
 
-**FinOps / Plataforma Aurum · Mar 2024 a Actualidad**
+**Plataforma FinOps · Mar 2024 a Actualidad**
 Ingeniero de referencia en una plataforma multi-servicio de facturación
-que procesa hasta 50.000 M USD anuales en logística y e-commerce.
-Sistema multi-tenant en producción, alta disponibilidad y evolución
-continua.
+en logística y e-commerce. Sistema multi-tenant en producción, alta
+disponibilidad y evolución continua.
 
 - Diseño e implementación de microservicios .NET event-driven sobre
   AKS, con Azure Service Bus + Kafka, patrón Outbox y consistencia
   eventual.
 - Construcción y liderazgo técnico de **CarrierCostProcessor**, el
   servicio que ingiere feeds de costes de carriers, los normaliza y
-  los proyecta sobre el modelo de coste de Aurum. Impacto directo en
+  los proyecta sobre el modelo de coste de FinOps. Impacto directo en
   la facturación al cliente.
 - Contribución a **Crucible**, herramienta interna de FinOps para
   reconciliación de costes y analítica entre unidades de negocio.

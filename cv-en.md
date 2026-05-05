@@ -5,9 +5,9 @@ GitHub: https://github.com/sergiolinarescodes
 
 ## Summary
 Senior Software Engineer with 12+ years building production SaaS-style
-platforms. Currently leading FinOps backend services at Maersk on Aurum,
-the platform powering invoicing for enterprise logistics customers (up to
-USD 50B/year invoiced). Day to day I work on event-driven .NET
+platforms. Currently leading FinOps backend services at Maersk: the
+multi-service platform powering invoicing for enterprise logistics
+customers. Day to day I work on event-driven .NET
 microservices, end-to-end observability and Kubernetes, with direct
 ownership of customer-facing systems in continuous evolution and
 technical decisions aligned with business needs.
@@ -22,17 +22,18 @@ CI/CD, Quartz, React, TypeScript.
 
 ### Senior Software Engineer, Maersk · Nov 2021 to Present
 
-**FinOps / Aurum platform · Mar 2024 to Present**
-Lead engineer on a multi-service invoicing platform processing up to
-USD 50B/year across logistics and e-commerce. High-availability,
-multi-tenant production system in continuous evolution.
+**FinOps platform · Mar 2024 to Present**
+Lead engineer on a multi-service invoicing platform across logistics
+and e-commerce. High-availability, multi-tenant production system in
+continuous evolution.
 
 - Designed and shipped event-driven .NET microservices on AKS, using
   Azure Service Bus + Kafka with the Outbox pattern and eventual
   consistency.
 - Built and led **CarrierCostProcessor**, the service that ingests
-  carrier cost feeds, normalises them and projects them onto the Aurum
-  cost model. Direct customer impact via more accurate invoicing.
+  carrier cost feeds, normalises them and projects them onto the
+  FinOps cost model. Direct customer impact via more accurate
+  invoicing.
 - Contributed to **Crucible**, an internal FinOps tool for cost
   reconciliation and analytics across business units.
 - Owned end-to-end observability with the OpenTelemetry collector,

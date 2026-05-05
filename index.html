@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <title>Sergio Linares Peralta · Senior Software Engineer</title>
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<meta name="description" content="CV of Sergio Linares Peralta, Senior Software Engineer in Madrid. Maersk FinOps / Aurum, event-driven .NET, Kubernetes, OpenTelemetry." />
+<meta name="description" content="CV of Sergio Linares Peralta, Senior Software Engineer in Madrid. Maersk FinOps, event-driven .NET, Kubernetes, OpenTelemetry." />
 <meta name="theme-color" content="#000000" />
 <meta property="og:title" content="Sergio Linares Peralta · Senior Software Engineer" />
 <meta property="og:description" content="Production SaaS-style platforms. .NET, microservices, AKS, OpenTelemetry. Madrid." />
@@ -14,13 +14,10 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=VT323&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/cv.css">
 </head>
-<body data-lang="en">
+<body>
 
 <!-- Boot overlay -->
 <div class="boot" aria-hidden="true"></div>
-
-<!-- Scroll progress bar (scroll-driven, where supported) -->
-<div class="scroll-progress" aria-hidden="true"></div>
 
 <div class="app">
 
@@ -30,7 +27,7 @@
       <div class="brand">SERGIO<br>LINARES</div>
       <div class="brand-sub">SR. SOFTWARE ENGINEER · MADRID</div>
     </div>
-    <nav role="tablist">
+    <nav role="tablist" aria-label="CV sections">
       <a class="btn-block active" href="#summary"    data-section-link="summary">01 · SUMMARY</a>
       <a class="btn-block"        href="#experience" data-section-link="experience">02 · EXPERIENCE</a>
       <a class="btn-block"        href="#projects"   data-section-link="projects">03 · PROJECTS</a>
@@ -50,51 +47,59 @@
     </div>
   </aside>
 
-  <!-- ========== STAGE / PERSPECTIVE SCREEN ========== -->
-  <main class="stage">
-    <div class="screen">
-      <div class="screen-bar">
-        <span><span class="dot fill"></span><span class="dot"></span><span class="dot"></span> CV.EXE · v2026.05 · MADRID</span>
-        <span><span class="kbd">←</span><span class="kbd">→</span> NAV · <span class="kbd">P</span> PRINT</span>
-      </div>
-      <div class="screen-content">
+  <!-- ========== TERMINAL ========== -->
+  <main class="terminal" aria-label="CV terminal">
+
+    <div class="term-bar">
+      <span><span class="dot fill"></span><span class="dot"></span><span class="dot"></span> CV.EXE · v2026.05 · MADRID</span>
+      <span><span class="kbd">←</span><span class="kbd">→</span> NAV · <span class="kbd">P</span> PRINT</span>
+    </div>
+
+    <div class="term-body">
+
+      <div class="term-prompt"><span class="ps1">~/cv $</span><span class="cmd"></span><span class="typing-caret"></span></div>
+
+      <div class="term-content">
 
         <!-- ========== 01 SUMMARY ========== -->
-        <section class="section reveal" id="summary">
-          <div class="section-head">01 · Summary</div>
-          <h2 class="page-title">SERGIO LINARES PERALTA<span class="caret"></span></h2>
-          <div class="page-sub">
-            Senior Software Engineer with 12+ years building production SaaS-style
-            platforms. Currently leading FinOps backend services at Maersk on
-            <b class="hi">Aurum</b>, the platform powering invoicing for enterprise
-            logistics customers (up to USD 50B per year invoiced). Day to day:
-            event-driven .NET microservices, end-to-end observability, Kubernetes.
-            Direct ownership of customer-facing systems in continuous evolution.
+        <section class="section active" id="summary">
+          <div class="section-head reveal-item">01 · Summary</div>
+
+          <h2 class="hero-title reveal-item">SERGIO LINARES PERALTA<span class="caret"></span></h2>
+          <div class="hero-sub reveal-item">SENIOR SOFTWARE ENGINEER · MADRID, ES · OPEN TO OFFERS</div>
+
+          <p class="hero-blurb reveal-item">
+            12+ years building production SaaS-style platforms. Currently leading
+            <b class="hi">FinOps</b> backend services at Maersk: event-driven .NET
+            microservices on Kubernetes, end-to-end observability, multi-tenant
+            invoicing in continuous evolution. I take direct ownership of
+            customer-facing services and back the technical decisions with
+            business outcomes.
+          </p>
+
+          <div class="hero-meta reveal-item">
+            <span><span class="key">FOCUS</span><b>Event-driven .NET / DDD</b></span>
+            <span><span class="key">CLOUD</span><b>Azure (AKS)</b></span>
+            <span><span class="key">OBS</span><b>OpenTelemetry / Grafana</b></span>
+            <span><span class="key">YEARS</span><b>12+</b></span>
+            <span><span class="key">SCALE</span><b>enterprise logistics, multi-tenant</b></span>
           </div>
 
-          <div class="kpi-strip reveal-stagger">
-            <div class="kpi"><div class="v">$50B</div><div class="l">/ year invoiced</div></div>
-            <div class="kpi"><div class="v">12+</div><div class="l">years experience</div></div>
-            <div class="kpi"><div class="v">4+</div><div class="l">years senior @ Maersk</div></div>
-            <div class="kpi"><div class="v">EU</div><div class="l">Madrid · open to offers</div></div>
-          </div>
-
-          <div class="row mt-lg wrap" style="gap:6px">
+          <div class="row wrap mt-lg reveal-item" style="gap:6px">
             <span class="chip on">PRODUCTION SAAS</span>
             <span class="chip on">EVENT-DRIVEN .NET</span>
             <span class="chip">DDD / CQRS</span>
             <span class="chip">KUBERNETES (AKS)</span>
             <span class="chip">OBSERVABILITY</span>
             <span class="chip">MULTI-TENANT</span>
-            <span class="chip">DIRECT CUSTOMER IMPACT</span>
           </div>
         </section>
 
         <!-- ========== 02 EXPERIENCE ========== -->
-        <section class="section reveal" id="experience">
-          <div class="section-head">02 · Experience</div>
+        <section class="section" id="experience">
+          <div class="section-head reveal-item">02 · Experience</div>
 
-          <div class="role">
+          <div class="role reveal-item">
             <div class="role-head">
               <div>
                 <div class="pixel">MAERSK</div>
@@ -103,19 +108,19 @@
               <span class="chip on">CURRENT</span>
             </div>
 
-            <div class="frame mt-md" style="border-color:var(--dim)">
+            <div class="subrole">
               <div class="role-head">
-                <div class="pixel" style="font-size:18px">FinOps · Aurum platform</div>
+                <div class="pixel">FinOps platform</div>
                 <div class="role-meta">MAR 2024 → PRESENT</div>
               </div>
               <div class="role-blurb">
-                Lead engineer on a multi-service invoicing platform processing up to
-                USD 50B / year across logistics and e-commerce. High-availability,
-                multi-tenant production system in continuous evolution.
+                Lead engineer on the multi-service invoicing platform behind
+                enterprise logistics customers. Multi-tenant production system
+                in continuous evolution.
               </div>
-              <div class="role-bullets reveal-stagger">
-                <div class="hrow"><span>Designed event-driven .NET microservices on AKS · Service Bus + Kafka, Outbox, eventual consistency</span><span class="muted">.NET · AKS · Outbox</span></div>
-                <div class="hrow"><span>Built and led <b class="hi">CarrierCostProcessor</b> · ingest, normalise and project carrier cost feeds onto the Aurum cost model</span><span class="muted">CARRIER · COST</span></div>
+              <div class="role-bullets">
+                <div class="hrow"><span>Designed event-driven .NET microservices on AKS · Service Bus + Kafka, Outbox, eventual consistency</span><span class="muted">.NET · AKS</span></div>
+                <div class="hrow"><span>Built and led <b class="hi">CarrierCostProcessor</b> · ingest, normalise and project carrier cost feeds onto the FinOps cost model</span><span class="muted">CARRIER · COST</span></div>
                 <div class="hrow"><span>Contributed to <b class="hi">Crucible</b> · internal FinOps tool for cost reconciliation and analytics across business units</span><span class="muted">FINOPS · ANALYTICS</span></div>
                 <div class="hrow"><span>Owned end-to-end observability · OpenTelemetry collector, Grafana (Loki, Prometheus, Tempo), GoAlert + Teams alerts</span><span class="muted">OTEL · GRAFANA</span></div>
                 <div class="hrow"><span>High quality bar · unit, integration and E2E tests across critical billing paths</span><span class="muted">TESTING</span></div>
@@ -123,9 +128,9 @@
               </div>
             </div>
 
-            <div class="frame mt-md" style="border-color:var(--dim)">
+            <div class="subrole">
               <div class="role-head">
-                <div class="pixel" style="font-size:18px">TrackShipment team</div>
+                <div class="pixel">TrackShipment team</div>
                 <div class="role-meta">SEP 2023 → MAR 2024</div>
               </div>
               <div class="role-bullets">
@@ -136,9 +141,9 @@
               </div>
             </div>
 
-            <div class="frame mt-md" style="border-color:var(--dim)">
+            <div class="subrole">
               <div class="role-head">
-                <div class="pixel" style="font-size:18px">Internal logistics &amp; Shopify shipping app</div>
+                <div class="pixel">Internal logistics &amp; Shopify shipping app</div>
                 <div class="role-meta">NOV 2021 → SEP 2023</div>
               </div>
               <div class="role-bullets">
@@ -148,7 +153,7 @@
             </div>
           </div>
 
-          <div class="role">
+          <div class="role reveal-item">
             <div class="role-head">
               <div>
                 <div class="pixel">BABEL SISTEMAS DE INFORMACIÓN</div>
@@ -163,7 +168,7 @@
             </div>
           </div>
 
-          <div class="role">
+          <div class="role reveal-item">
             <div class="role-head">
               <div>
                 <div class="pixel">VOILÁ PRODUCTORA</div>
@@ -173,19 +178,19 @@
             </div>
             <div class="role-blurb">
               PHP, JavaScript, jQuery, NodeJS, Unity (.NET). Proprietary CMS
-              platforms, a Google Maps routing app, multimedia content managers and
-              a VR interactive game.
+              platforms, a Google Maps routing app, multimedia content managers
+              and a VR interactive game.
             </div>
           </div>
         </section>
 
         <!-- ========== 03 PROJECTS ========== -->
-        <section class="section reveal" id="projects">
-          <div class="section-head">03 · Projects</div>
+        <section class="section" id="projects">
+          <div class="section-head reveal-item">03 · Projects</div>
 
-          <div class="proj-grid reveal-stagger">
+          <div class="proj-grid">
 
-            <div class="proj featured">
+            <div class="proj featured reveal-item">
               <div class="spread">
                 <div class="title">shipping-orchestrator</div>
                 <span class="chip on">DDD / SAAS · OPEN SOURCE</span>
@@ -199,7 +204,7 @@
                 Shopify / WooCommerce / PostNL, three deployable hosts
                 (PublicApi, PrivateApi, Worker), full OpenTelemetry.
               </div>
-              <div class="chips wrap row">
+              <div class="row wrap" style="gap:4px">
                 <span class="chip">.NET 10</span>
                 <span class="chip">DDD</span>
                 <span class="chip">CQRS</span>
@@ -214,15 +219,15 @@
               </div>
             </div>
 
-            <div class="proj">
+            <div class="proj reveal-item">
               <div class="title">CarrierCostProcessor</div>
-              <div class="role-meta">MAERSK · AURUM · 2024 →</div>
+              <div class="role-meta">MAERSK · FINOPS · 2024 →</div>
               <div class="blurb">
                 Service that ingests carrier cost feeds, normalises them and
-                projects them onto the Aurum cost model. Direct customer impact
+                projects them onto the FinOps cost model. Direct customer impact
                 via more accurate enterprise invoicing.
               </div>
-              <div class="chips wrap row">
+              <div class="row wrap" style="gap:4px">
                 <span class="chip">.NET</span>
                 <span class="chip">AKS</span>
                 <span class="chip">SERVICE BUS</span>
@@ -231,15 +236,15 @@
               </div>
             </div>
 
-            <div class="proj">
+            <div class="proj reveal-item">
               <div class="title">Crucible</div>
-              <div class="role-meta">MAERSK · AURUM · INTERNAL FINOPS</div>
+              <div class="role-meta">MAERSK · FINOPS · INTERNAL TOOL</div>
               <div class="blurb">
                 Internal FinOps tool for cost reconciliation and analytics
                 across business units. Backs the data layer that drives
                 cross-team financial decisions.
               </div>
-              <div class="chips wrap row">
+              <div class="row wrap" style="gap:4px">
                 <span class="chip">.NET</span>
                 <span class="chip">FINOPS</span>
                 <span class="chip">ANALYTICS</span>
@@ -251,13 +256,13 @@
         </section>
 
         <!-- ========== 04 STACK ========== -->
-        <section class="section reveal" id="stack">
-          <div class="section-head">04 · Stack</div>
+        <section class="section" id="stack">
+          <div class="section-head reveal-item">04 · Stack</div>
 
-          <div class="stack-grid reveal-stagger">
-            <div class="stack-group">
+          <div class="stack-grid">
+            <div class="stack-group reveal-item">
               <div class="xs">BACKEND</div>
-              <div class="row wrap">
+              <div class="row wrap" style="gap:4px">
                 <span class="chip on">.NET 8/10</span>
                 <span class="chip on">C#</span>
                 <span class="chip">PHP</span>
@@ -267,9 +272,9 @@
               </div>
             </div>
 
-            <div class="stack-group">
+            <div class="stack-group reveal-item">
               <div class="xs">EVENT-DRIVEN &amp; INTEGRATION</div>
-              <div class="row wrap">
+              <div class="row wrap" style="gap:4px">
                 <span class="chip on">Azure Service Bus</span>
                 <span class="chip on">Kafka</span>
                 <span class="chip">AWS SQS / SNS</span>
@@ -279,9 +284,9 @@
               </div>
             </div>
 
-            <div class="stack-group">
+            <div class="stack-group reveal-item">
               <div class="xs">DATA</div>
-              <div class="row wrap">
+              <div class="row wrap" style="gap:4px">
                 <span class="chip">PostgreSQL</span>
                 <span class="chip">MSSQL</span>
                 <span class="chip">ElasticSearch</span>
@@ -289,9 +294,9 @@
               </div>
             </div>
 
-            <div class="stack-group">
+            <div class="stack-group reveal-item">
               <div class="xs">CLOUD &amp; OBSERVABILITY</div>
-              <div class="row wrap">
+              <div class="row wrap" style="gap:4px">
                 <span class="chip on">Azure (AKS)</span>
                 <span class="chip">Docker</span>
                 <span class="chip">Kubernetes</span>
@@ -304,9 +309,9 @@
               </div>
             </div>
 
-            <div class="stack-group">
+            <div class="stack-group reveal-item">
               <div class="xs">FRONTEND</div>
-              <div class="row wrap">
+              <div class="row wrap" style="gap:4px">
                 <span class="chip">React</span>
                 <span class="chip">TypeScript</span>
                 <span class="chip">JavaScript</span>
@@ -315,9 +320,9 @@
               </div>
             </div>
 
-            <div class="stack-group">
+            <div class="stack-group reveal-item">
               <div class="xs">METHODOLOGY</div>
-              <div class="row wrap">
+              <div class="row wrap" style="gap:4px">
                 <span class="chip on">DDD</span>
                 <span class="chip on">CQRS</span>
                 <span class="chip">Saga</span>
@@ -330,11 +335,11 @@
         </section>
 
         <!-- ========== 05 CONTACT ========== -->
-        <section class="section reveal" id="contact">
-          <div class="section-head">05 · Contact</div>
+        <section class="section" id="contact">
+          <div class="section-head reveal-item">05 · Contact</div>
 
           <div class="contact-grid">
-            <div class="frame">
+            <div class="frame reveal-item">
               <div class="xs">DIRECT</div>
               <div class="contact-line"><span class="muted">EMAIL</span><a class="v" href="mailto:sergiolinaresperalta@gmail.com">sergiolinaresperalta@gmail.com</a></div>
               <div class="contact-line"><span class="muted">PHONE</span><span class="v">+34 622 76 16 36</span></div>
@@ -342,7 +347,7 @@
               <div class="contact-line"><span class="muted">STATUS</span><span class="v hi">OPEN TO OFFERS</span></div>
             </div>
 
-            <div class="frame">
+            <div class="frame reveal-item">
               <div class="xs">LINKS</div>
               <div class="contact-line"><span class="muted">GITHUB</span><a class="v" href="https://github.com/sergiolinarescodes" target="_blank" rel="noopener">sergiolinarescodes</a></div>
               <div class="contact-line"><span class="muted">SHOWCASE</span><a class="v" href="https://github.com/sergiolinarescodes/shipping-orchestrator" target="_blank" rel="noopener">shipping-orchestrator</a></div>
@@ -351,7 +356,7 @@
             </div>
           </div>
 
-          <div class="frame mt-lg">
+          <div class="frame mt-lg reveal-item">
             <div class="xs">LANGUAGES</div>
             <div class="row mt-sm wrap">
               <span class="chip on">Español · native</span>
@@ -359,9 +364,9 @@
             </div>
           </div>
 
-          <div class="frame mt-md">
+          <div class="frame mt-md reveal-item">
             <div class="xs">END OF FILE</div>
-            <pre class="ascii small muted" style="margin-top:6px">
+            <pre class="small muted" style="margin-top:6px;font-family:var(--mono)">
 $ sergio --available
 > ready to ship.
 </pre>
@@ -370,6 +375,12 @@ $ sergio --available
 
       </div>
     </div>
+
+    <div class="term-foot">
+      <span class="pos">SECTION 01 / 05</span>
+      <span>READY · MONO 13PX · UTF-8</span>
+    </div>
+
   </main>
 
 </div>
