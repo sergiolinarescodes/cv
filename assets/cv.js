@@ -1,6 +1,6 @@
 // === Boot sequence: typewriter overlay, then reveal screen ===
 const BOOT_LINES = [
-  '$ ./cv.exe --user="sergio.linares" --target="sportian"',
+  '$ ./cv.exe --user="sergio.linares"',
   'mounting fs ........................ <ok>',
   'loading modules:',
   '  · finops/aurum ................... <ok>',
