@@ -1,9 +1,9 @@
-# CV — Sergio Linares Peralta
+# CV, Sergio Linares Peralta
 
-Senior Software Engineer based in Madrid. Currently leading FinOps backend
-services at Maersk on the Aurum invoicing platform — event-driven .NET
-microservices, AKS, OpenTelemetry, multi-tenant SaaS-style production
-systems.
+Senior Software Engineer based in Madrid. Currently leading FinOps
+backend services at Maersk on the Aurum invoicing platform:
+event-driven .NET microservices, AKS, OpenTelemetry, multi-tenant
+SaaS-style production systems.
 
 - [English version](./cv-en.md)
 - [Versión en español](./cv-es.md)
