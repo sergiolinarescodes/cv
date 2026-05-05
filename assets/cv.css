@@ -33,8 +33,17 @@ ul{margin:0;padding-left:18px}
 .muted{color:var(--mid)}
 .hi{color:var(--hi)}
 
-/* === Caret blink === */
-.caret::after{content:"▮";margin-left:6px;animation:blink 1s steps(2) infinite;color:var(--hi)}
+/* === Caret blink (thin vertical bar, real-terminal style) === */
+.caret::after{
+  content:"";
+  display:inline-block;
+  width:.12em;
+  height:.78em;
+  background:var(--hi);
+  margin-left:.22em;
+  vertical-align:-.04em;
+  animation:blink 1s steps(2) infinite;
+}
 .caret.solid::after{animation:none}
 @keyframes blink{50%{opacity:0}}
 
@@ -133,8 +142,8 @@ body{display:grid;place-items:center;padding:28px}
 .term-prompt .ps1{color:var(--mid);margin-right:8px}
 .term-prompt .cmd{color:var(--hi)}
 .term-prompt .typing-caret{
-  display:inline-block;width:.6em;height:1.05em;background:var(--hi);
-  margin-left:4px;vertical-align:-2px;
+  display:inline-block;width:.12em;height:.95em;background:var(--hi);
+  margin-left:.18em;vertical-align:-.08em;
   animation:blink 1s steps(2) infinite;
 }
 .term-prompt.done .typing-caret{display:none}
