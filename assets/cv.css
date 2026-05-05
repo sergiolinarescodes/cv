@@ -92,8 +92,8 @@ body{display:grid;place-items:center;padding:28px}
 .sidebar .brand-sub{font-size:10px;letter-spacing:2px;color:var(--mid);margin-top:2px;text-transform:uppercase}
 .sidebar nav{margin-top:22px;display:flex;flex-direction:column;gap:6px}
 .sidebar nav .btn-block{font-size:12px;letter-spacing:1.2px}
-.sidebar .sb-foot{margin-top:auto;display:flex;flex-direction:column;gap:8px}
-.sidebar .sb-links{display:flex;gap:6px;flex-wrap:wrap}
+.sidebar .sb-foot{margin-top:auto;display:flex;flex-direction:column;gap:6px}
+.sidebar .sb-btn{display:block;width:100%;text-align:center;padding:8px 12px;font-size:11px;letter-spacing:1.2px;margin:0}
 
 /* === Terminal (the "TV") - fixed, no perspective === */
 .terminal{
@@ -342,10 +342,9 @@ details.role-collapsible > .period-blurb{
 
   .sidebar .sb-foot{
     margin-top:10px;padding-bottom:14px;
-    flex-direction:row;align-items:center;flex-wrap:wrap;gap:8px;
+    flex-direction:row;align-items:center;flex-wrap:wrap;gap:6px;
   }
-  .sidebar .sb-foot .xs{display:none}
-  .sidebar .sb-foot .small{font-size:10px}
+  .sidebar .sb-btn{flex:1 1 calc(50% - 4px);width:auto;font-size:10px;padding:7px 10px}
 
   .terminal{width:100%;height:auto;min-height:60vh;max-height:none;border:0}
   .term-bar{font-size:10px;padding:6px 12px}
