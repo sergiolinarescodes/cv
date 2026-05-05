@@ -1,17 +1,18 @@
 # Sergio Linares Peralta
-Senior Software Engineer · Madrid, ES
+Senior Software Engineer / Tech Lead · Madrid, ES
 sergiolinaresperalta@gmail.com · +34 622 76 16 36
 GitHub: https://github.com/sergiolinarescodes
 
 ## Resumen
-Senior Software Engineer con más de 12 años construyendo plataformas
-tipo SaaS en producción. Actualmente lidero servicios backend de FinOps
-en Maersk: la plataforma multi-servicio que da soporte a la facturación
-de clientes enterprise de logística.
-Mi día a día son microservicios .NET event-driven, observabilidad
-end-to-end y Kubernetes, con responsabilidad directa sobre sistemas en
-evolución continua, impacto directo en cliente y decisiones técnicas
-alineadas con las necesidades de negocio.
+Senior Software Engineer / Tech Lead con más de 12 años construyendo
+plataformas tipo SaaS en producción. Actualmente lidero servicios
+backend de FinOps en Maersk: una plataforma escalable y multi-servicio
+que da soporte a la facturación para clientes enterprise de logística.
+Mi día a día son microservicios .NET event-driven diseñados para alta
+disponibilidad, resiliencia y evolución continua, observabilidad
+end-to-end con OpenTelemetry y Kubernetes sobre AKS. Responsabilidad
+directa sobre sistemas con impacto directo en cliente y decisiones
+técnicas alineadas con las necesidades de negocio.
 
 ## Stack
 .NET 8/10, C#, microservicios, event-driven (Azure Service Bus, Kafka,
@@ -26,13 +27,15 @@ Tooling de IA: Claude Code, GitHub Copilot.
 ### Senior Software Engineer, Maersk · Nov 2021 a Actualidad
 
 **Plataforma FinOps · Mar 2024 a Actualidad**
-Ingeniero de referencia en una plataforma multi-servicio de facturación
+Tech-lead en una plataforma escalable y multi-servicio de facturación
 en logística y e-commerce. Sistema multi-tenant en producción, alta
-disponibilidad y evolución continua.
+disponibilidad y evolución continua, con decisiones técnicas alineadas
+con las necesidades de negocio.
 
 - Diseño e implementación de microservicios .NET event-driven sobre
   AKS, con Azure Service Bus + Kafka, patrón Outbox y consistencia
-  eventual.
+  eventual. Arquitectura para escalabilidad, resiliencia y evolución
+  continua.
 - Construcción y liderazgo técnico de **CarrierCostProcessor**, el
   servicio que ingiere feeds de costes de carriers, los normaliza y
   los proyecta sobre el modelo de coste de FinOps. Impacto directo en
@@ -46,8 +49,11 @@ disponibilidad y evolución continua.
   E2E sobre los flujos críticos de billing.
 - Liderazgo del nuevo microservicio de generación de PDFs de factura
   (backend a object storage), cara al cliente.
+- Modernización de pipelines CI/CD y liderazgo de la migración a
+  Kubernetes (AKS).
 - Participación activa en decisiones de evolución de producto e
-  infraestructura: upgrades, dirección técnica y procesos de on-call.
+  infraestructura: upgrades, dirección técnica, procesos de on-call y
+  mejora continua.
 
 **Equipo TrackShipment · Sep 2023 a Mar 2024**
 

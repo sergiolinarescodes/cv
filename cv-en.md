@@ -1,16 +1,17 @@
 # Sergio Linares Peralta
-Senior Software Engineer · Madrid, ES
+Senior Software Engineer / Tech Lead · Madrid, ES
 sergiolinaresperalta@gmail.com · +34 622 76 16 36
 GitHub: https://github.com/sergiolinarescodes
 
 ## Summary
-Senior Software Engineer with 12+ years building production SaaS-style
-platforms. Currently leading FinOps backend services at Maersk: the
-multi-service platform powering invoicing for enterprise logistics
-customers. Day to day I work on event-driven .NET
-microservices, end-to-end observability and Kubernetes, with direct
-ownership of customer-facing systems in continuous evolution and
-technical decisions aligned with business needs.
+Senior Software Engineer / Tech Lead with 12+ years building production
+SaaS-style platforms. Currently leading FinOps backend services at
+Maersk: a scalable, multi-service platform powering invoicing for
+enterprise logistics customers. Day to day I work on event-driven .NET
+microservices designed for high availability, resilience and continuous
+evolution, end-to-end observability with OpenTelemetry, and Kubernetes
+on AKS. Direct ownership of customer-facing systems and technical
+decisions aligned with business needs.
 
 ## Tech focus
 .NET 8/10, C#, microservices, event-driven (Azure Service Bus, Kafka,
@@ -25,13 +26,15 @@ AI tooling: Claude Code, GitHub Copilot.
 ### Senior Software Engineer, Maersk · Nov 2021 to Present
 
 **FinOps platform · Mar 2024 to Present**
-Lead engineer on a multi-service invoicing platform across logistics
-and e-commerce. High-availability, multi-tenant production system in
-continuous evolution.
+Tech-lead on a scalable, multi-service invoicing platform across
+logistics and e-commerce. High-availability, multi-tenant production
+system in continuous evolution, with technical decisions aligned with
+business needs.
 
 - Designed and shipped event-driven .NET microservices on AKS, using
   Azure Service Bus + Kafka with the Outbox pattern and eventual
-  consistency.
+  consistency. Architected for scalability, resilience and continuous
+  evolution.
 - Built and led **CarrierCostProcessor**, the service that ingests
   carrier cost feeds, normalises them and projects them onto the
   FinOps cost model. Direct customer impact via more accurate
@@ -45,8 +48,10 @@ continuous evolution.
   critical billing paths.
 - Led the new microservice for invoice-PDF generation (backend to
   object storage), customer-facing.
+- Modernised CI/CD pipelines and led the migration to Kubernetes
+  (AKS).
 - Active in product and tech-evolution decisions: framework upgrades,
-  infra direction, on-call processes.
+  infra direction, on-call processes, continuous improvement.
 
 **TrackShipment team · Sep 2023 to Mar 2024**
 
