@@ -37,11 +37,11 @@ ul{margin:0;padding-left:18px}
 .caret::after{
   content:"";
   display:inline-block;
-  width:.12em;
-  height:.78em;
+  width:.07em;
+  height:.5em;
   background:var(--hi);
-  margin-left:.22em;
-  vertical-align:-.04em;
+  margin-left:.18em;
+  vertical-align:.02em;
   animation:blink 1s steps(2) infinite;
 }
 .caret.solid::after{animation:none}
