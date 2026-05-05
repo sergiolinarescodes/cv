@@ -36,7 +36,7 @@ jobs:
       - name: Generate cv-en.html (pandoc) and cv-en.pdf (WeasyPrint)
         run: |
           pandoc cv-en.md -s \
-            --metadata title="Sergio Linares Peralta - CV" \
+            --metadata pagetitle="Sergio Linares Peralta - CV" \
             --css=cv-print.css \
             -o cv-en.html
           weasyprint cv-en.html cv-en.pdf
