@@ -15,16 +15,44 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate cv-en.docx and cv-en.pdf from cv-en.md
+        run: |
+          docker pull pandoc/latex:3.5
+          docker run --rm -u "$(id -u):$(id -g)" \
+            -v "$PWD:/data" pandoc/latex:3.5 \
+            -f markdown -t docx \
+            -o cv-en.docx cv-en.md
+          docker run --rm -u "$(id -u):$(id -g)" \
+            -v "$PWD:/data" pandoc/latex:3.5 \
+            --pdf-engine=xelatex \
+            -V geometry:margin=2cm \
+            -V fontsize=11pt \
+            -V colorlinks=true \
+            -V linkcolor=black \
+            -V urlcolor=black \
+            -V mainfont="Latin Modern Roman" \
+            -V monofont="Latin Modern Mono" \
+            -o cv-en.pdf cv-en.md
+
+      - name: List artifacts
+        run: ls -la cv-en.docx cv-en.pdf
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
   deploy:
+    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
       - id: deployment
         uses: actions/deploy-pages@v4

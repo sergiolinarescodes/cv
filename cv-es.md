@@ -19,6 +19,8 @@ AWS SQS/SNS), DDD / CQRS, patrón Outbox, PostgreSQL, MSSQL, Azure
 (AKS), Docker, OpenTelemetry, stack Grafana (Loki, Prometheus, Tempo),
 CI/CD, Quartz, React, TypeScript.
 
+Tooling de IA: Claude Code, GitHub Copilot.
+
 ## Experiencia profesional
 
 ### Senior Software Engineer, Maersk · Nov 2021 a Actualidad
