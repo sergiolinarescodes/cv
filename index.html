@@ -118,8 +118,8 @@
               </p>
               <div class="role-bullets">
                 <div class="hrow"><span data-i18n="exp.finops.b1">Designed event-driven .NET microservices on AKS · Service Bus + Kafka, Outbox, eventual consistency · architected for scalability and resilience</span><span class="muted">.NET · AKS</span></div>
-                <div class="hrow"><span data-i18n="exp.finops.b2">Built and led <b class="hi">CarrierCostProcessor</b> · ingest, normalise and project carrier cost feeds onto the FinOps cost model</span><span class="muted">CARRIER · COST</span></div>
-                <div class="hrow"><span data-i18n="exp.finops.b3">Contributed to <b class="hi">Crucible</b> · internal FinOps tool for cost reconciliation and analytics across business units</span><span class="muted">FINOPS · ANALYTICS</span></div>
+                <div class="hrow"><span data-i18n="exp.finops.b2">Lead developer &amp; architect of <b class="hi">CarrierCostProcessor</b> · FTP ingestion of carrier cost files, builder-pattern carrier onboarding (with AI assist), Outbox + Kafka with Schema Registry, automated E2E + integration test scaffolding per carrier</span><span class="muted">CCP · KAFKA</span></div>
+                <div class="hrow"><span data-i18n="exp.finops.b3">Lead developer &amp; architect of <b class="hi">Crucible</b> · .NET 10 generic event-processing platform that consumes CCP feeds via Kafka and produces invoice-line records in the shared FinOps DB; CQRS, EF Core, OpenTelemetry, Testcontainers E2E</span><span class="muted">CRUCIBLE · CQRS</span></div>
                 <div class="hrow"><span data-i18n="exp.finops.b4">Owned end-to-end observability · OpenTelemetry collector, Grafana (Loki, Prometheus, Tempo), GoAlert + Teams alerts</span><span class="muted">OTEL · GRAFANA</span></div>
                 <div class="hrow"><span data-i18n="exp.finops.b5">High quality bar · unit, integration and E2E tests across critical billing paths</span><span class="muted">TESTING</span></div>
                 <div class="hrow"><span data-i18n="exp.finops.b6">Led a new microservice for invoice-PDF generation (backend → object storage), customer-facing</span><span class="muted">PDF · STORAGE</span></div>
@@ -224,34 +224,58 @@
 
             <div class="proj reveal-item">
               <div class="title">CarrierCostProcessor</div>
-              <div class="role-meta" data-i18n="proj.ccp-meta">MAERSK · FINOPS · 2024 →</div>
+              <div class="role-meta" data-i18n="proj.ccp-meta">MAERSK · FINOPS · LEAD DEVELOPER &amp; ARCHITECT</div>
               <div class="blurb" data-i18n="proj.ccp-blurb">
-                Service that ingests carrier cost feeds, normalises them and
-                projects them onto the FinOps cost model. Direct customer impact
-                via more accurate enterprise invoicing.
+                Carrier cost ingestion service. Lead developer and architect:
+                designed the file-ingestion pipeline that pulls carrier cost
+                files over <b class="hi">FTP</b>, with a <b class="hi">builder
+                pattern</b> for plug-and-play onboarding of new carriers
+                (including AI-assisted integrations). The
+                <b class="hi">Outbox</b> pattern produces normalised cost
+                events to <b class="hi">Kafka</b> under contracts governed by
+                Schema Registry, consumed downstream by FinOps and Crucible.
+                Full E2E + integration test scaffolding spins up automatically
+                per carrier, so each new integration ships with its own
+                safety net.
               </div>
               <div class="row wrap" style="gap:4px">
                 <span class="chip">.NET</span>
                 <span class="chip">AKS</span>
-                <span class="chip">SERVICE BUS</span>
-                <span class="chip">KAFKA</span>
+                <span class="chip">FTP</span>
+                <span class="chip">BUILDER PATTERN</span>
                 <span class="chip">OUTBOX</span>
+                <span class="chip">KAFKA</span>
+                <span class="chip">SCHEMA REGISTRY</span>
+                <span class="chip">E2E TESTS</span>
+                <span class="chip">AI ASSIST</span>
               </div>
             </div>
 
             <div class="proj reveal-item">
               <div class="title">Crucible</div>
-              <div class="role-meta" data-i18n="proj.crucible-meta">MAERSK · FINOPS · INTERNAL TOOL</div>
+              <div class="role-meta" data-i18n="proj.crucible-meta">MAERSK · FINOPS · LEAD DEVELOPER &amp; ARCHITECT</div>
               <div class="blurb" data-i18n="proj.crucible-blurb">
-                Internal FinOps tool for cost reconciliation and analytics
-                across business units. Backs the data layer that drives
-                cross-team financial decisions.
+                .NET 10 generic event-processing platform for FinOps. Lead
+                developer and architect: designed the layered architecture on
+                top of the existing FinOps patterns (Domain / Application /
+                Infrastructure / Pipelines / Api / Worker), CQRS via mediator,
+                EF Core code-first migrations, OpenTelemetry, and
+                Testcontainers-backed E2E tests. First pipeline ingests
+                <b class="hi">VendorCost</b> feeds from CarrierCostProcessor
+                over Kafka and produces invoice-line records in the shared
+                FinOps database, with per-field enrichment attribution,
+                three-dimensional event status (processing / quality /
+                business outcome) and full event lineage. Built generic
+                enough to absorb future revenue and reconciliation pipelines.
               </div>
               <div class="row wrap" style="gap:4px">
-                <span class="chip">.NET</span>
+                <span class="chip">.NET 10</span>
+                <span class="chip">CQRS</span>
+                <span class="chip">KAFKA</span>
+                <span class="chip">EF CORE</span>
+                <span class="chip">OTEL</span>
+                <span class="chip">TESTCONTAINERS</span>
                 <span class="chip">FINOPS</span>
-                <span class="chip">ANALYTICS</span>
-                <span class="chip">RECONCILIATION</span>
               </div>
             </div>
 

@@ -36,12 +36,23 @@ con las necesidades de negocio.
   AKS, con Azure Service Bus + Kafka, patrón Outbox y consistencia
   eventual. Arquitectura para escalabilidad, resiliencia y evolución
   continua.
-- Construcción y liderazgo técnico de **CarrierCostProcessor**, el
-  servicio que ingiere feeds de costes de carriers, los normaliza y
-  los proyecta sobre el modelo de coste de FinOps. Impacto directo en
-  la facturación al cliente.
-- Contribución a **Crucible**, herramienta interna de FinOps para
-  reconciliación de costes y analítica entre unidades de negocio.
+- Lead developer y arquitecto de **CarrierCostProcessor**: ingesta vía
+  FTP de ficheros de coste de carriers, onboarding con patrón builder
+  para nuevos carriers (con integraciones asistidas por IA), patrón
+  Outbox que produce eventos normalizados a Kafka con contratos
+  gestionados vía Schema Registry, y andamiaje de tests E2E + de
+  integración generado automáticamente por carrier, de forma que cada
+  integración viaja con su propia red de seguridad.
+- Lead developer y arquitecto de **Crucible**: plataforma genérica
+  .NET 10 de procesamiento de eventos para FinOps. Arquitectura por
+  capas (Domain / Application / Infrastructure / Pipelines / Api /
+  Worker), CQRS vía mediator, EF Core code-first, OpenTelemetry y
+  tests E2E con Testcontainers. La primera pipeline consume feeds de
+  CCP por Kafka y escribe líneas de factura en la BD compartida de
+  FinOps, con atribución de enriquecimiento por campo, estado
+  tridimensional de evento (procesamiento / calidad / decisión de
+  negocio) y lineage completo. Construida lo bastante genérica para
+  absorber futuras pipelines de revenue y reconciliación.
 - Responsable de la observabilidad end-to-end con el collector de
   OpenTelemetry, Grafana (Loki, Prometheus, Tempo) y alertas vía
   webhook a GoAlert y Microsoft Teams.

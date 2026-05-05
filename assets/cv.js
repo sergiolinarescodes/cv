@@ -59,8 +59,8 @@ const ES = {
     'con las necesidades de negocio.',
 
   'exp.finops.b1': 'Diseño de microservicios .NET event-driven sobre AKS · Service Bus + Kafka, Outbox, consistencia eventual · arquitectura para escalabilidad y resiliencia',
-  'exp.finops.b2': 'Construcción y liderazgo de <b class="hi">CarrierCostProcessor</b> · ingiere, normaliza y proyecta feeds de coste de carriers sobre el modelo de FinOps',
-  'exp.finops.b3': 'Contribución a <b class="hi">Crucible</b> · herramienta interna de FinOps para reconciliación de costes y analítica entre unidades de negocio',
+  'exp.finops.b2': 'Lead developer y arquitecto de <b class="hi">CarrierCostProcessor</b> · ingesta vía FTP de ficheros de coste de carriers, onboarding con patrón builder (con asistencia de IA), Outbox + Kafka con Schema Registry, y andamiaje de tests E2E + integración generado automáticamente por carrier',
+  'exp.finops.b3': 'Lead developer y arquitecto de <b class="hi">Crucible</b> · plataforma genérica .NET 10 de procesamiento de eventos que consume feeds de CCP por Kafka y produce líneas de factura en la BD compartida de FinOps; CQRS, EF Core, OpenTelemetry, tests E2E con Testcontainers',
   'exp.finops.b4': 'Observabilidad end-to-end · collector de OpenTelemetry, Grafana (Loki, Prometheus, Tempo), alertas en GoAlert + Teams',
   'exp.finops.b5': 'Calidad alta · tests unitarios, de integración y E2E sobre flujos críticos de billing',
   'exp.finops.b6': 'Liderazgo de un nuevo microservicio para generación de PDFs de factura (backend → object storage), cara al cliente',
@@ -105,17 +105,31 @@ const ES = {
     '(PublicApi, PrivateApi, Worker), OpenTelemetry completo.',
   'proj.view-repo':     'VER REPO →',
 
-  'proj.ccp-meta':      'MAERSK · FINOPS · 2024 →',
+  'proj.ccp-meta':      'MAERSK · FINOPS · LEAD DEVELOPER Y ARQUITECTO',
   'proj.ccp-blurb':
-    'Servicio que ingiere feeds de coste de carriers, los normaliza y los ' +
-    'proyecta sobre el modelo de coste de FinOps. Impacto directo en cliente ' +
-    'vía facturación enterprise más precisa.',
+    'Servicio de ingesta de costes de carriers. Lead developer y arquitecto: ' +
+    'diseño del pipeline de ingesta de ficheros desde <b class="hi">FTP</b> con ' +
+    '<b class="hi">patrón builder</b> para onboarding plug-and-play de nuevos ' +
+    'carriers (incluida integración asistida por IA). Patrón ' +
+    '<b class="hi">Outbox</b> que produce eventos de coste normalizados a ' +
+    '<b class="hi">Kafka</b> con contratos gestionados vía Schema Registry, ' +
+    'consumidos por FinOps y Crucible. Andamiaje de tests E2E + integración ' +
+    'generado automáticamente por carrier, de forma que cada nueva integración ' +
+    'viaja con su propia red de seguridad.',
 
-  'proj.crucible-meta': 'MAERSK · FINOPS · HERRAMIENTA INTERNA',
+  'proj.crucible-meta': 'MAERSK · FINOPS · LEAD DEVELOPER Y ARQUITECTO',
   'proj.crucible-blurb':
-    'Herramienta interna de FinOps para reconciliación de costes y analítica ' +
-    'entre unidades de negocio. Da soporte a la capa de datos que dirige las ' +
-    'decisiones financieras entre equipos.',
+    'Plataforma genérica de procesamiento de eventos para FinOps en .NET 10. ' +
+    'Lead developer y arquitecto: diseño de la arquitectura por capas sobre ' +
+    'los patrones existentes de FinOps (Domain / Application / Infrastructure ' +
+    '/ Pipelines / Api / Worker), CQRS vía mediator, EF Core code-first, ' +
+    'OpenTelemetry y tests E2E con Testcontainers. La primera pipeline ' +
+    'ingiere feeds <b class="hi">VendorCost</b> desde CarrierCostProcessor por ' +
+    'Kafka y produce líneas de factura en la base de datos compartida de ' +
+    'FinOps, con atribución de enriquecimiento por campo, estado tridimensional ' +
+    'de evento (procesamiento / calidad / decisión de negocio) y lineage ' +
+    'completo. Construida lo bastante genérica para absorber futuras pipelines ' +
+    'de revenue y reconciliación.',
 
   // Stack
   'stack.backend':  'BACKEND',

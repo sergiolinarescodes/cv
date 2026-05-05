@@ -35,12 +35,22 @@ business needs.
   Azure Service Bus + Kafka with the Outbox pattern and eventual
   consistency. Architected for scalability, resilience and continuous
   evolution.
-- Built and led **CarrierCostProcessor**, the service that ingests
-  carrier cost feeds, normalises them and projects them onto the
-  FinOps cost model. Direct customer impact via more accurate
-  invoicing.
-- Contributed to **Crucible**, an internal FinOps tool for cost
-  reconciliation and analytics across business units.
+- Lead developer and architect of **CarrierCostProcessor**: FTP-based
+  ingestion of carrier cost files, builder-pattern onboarding for new
+  carriers (with AI-assisted integrations), Outbox producing
+  normalised events to Kafka under Schema Registry contracts, and
+  automated E2E + integration test scaffolding generated per carrier
+  so each integration ships with its own safety net.
+- Lead developer and architect of **Crucible**: a .NET 10 generic
+  event-processing platform for FinOps. Layered architecture
+  (Domain / Application / Infrastructure / Pipelines / Api / Worker),
+  CQRS via mediator, EF Core code-first migrations, OpenTelemetry,
+  Testcontainers-backed E2E tests. First pipeline consumes CCP feeds
+  via Kafka and writes invoice-line records into the shared FinOps
+  DB, with per-field enrichment attribution, three-dimensional event
+  status (processing / quality / business outcome) and full event
+  lineage. Built generic enough to absorb future revenue and
+  reconciliation pipelines.
 - Owned end-to-end observability with the OpenTelemetry collector,
   Grafana (Loki, Prometheus, Tempo) and webhook-driven alerts to
   GoAlert and Microsoft Teams.
