@@ -1,0 +1,12 @@
+# Word lock files
+~$*.docx
+~$*.doc
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.iml
