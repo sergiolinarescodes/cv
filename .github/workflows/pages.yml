@@ -35,8 +35,6 @@ jobs:
             -V colorlinks=true \
             -V linkcolor=black \
             -V urlcolor=black \
-            -V mainfont="Latin Modern Roman" \
-            -V monofont="Latin Modern Mono" \
             -o cv-en.pdf cv-en.md
 
       - name: List artifacts
