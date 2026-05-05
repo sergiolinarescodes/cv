@@ -1,7 +1,7 @@
 # Sergio Linares Peralta
 Senior Software Engineer / Tech Lead · Madrid, ES
 sergiolinaresperalta@gmail.com · +34 622 76 16 36
-GitHub: https://github.com/sergiolinarescodes
+Web: https://sergiolinarescodes.github.io/cv/
 
 ## Resumen
 Senior Software Engineer / Tech Lead con más de 12 años construyendo
