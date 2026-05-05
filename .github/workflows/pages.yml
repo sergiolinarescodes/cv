@@ -20,25 +20,29 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate cv-en.docx and cv-en.pdf from cv-en.md
+      - name: Install pandoc + WeasyPrint
         run: |
-          docker pull pandoc/latex:3.5
-          docker run --rm -u "$(id -u):$(id -g)" \
-            -v "$PWD:/data" pandoc/latex:3.5 \
-            -f markdown -t docx \
-            -o cv-en.docx cv-en.md
-          docker run --rm -u "$(id -u):$(id -g)" \
-            -v "$PWD:/data" pandoc/latex:3.5 \
-            --pdf-engine=xelatex \
-            -V geometry:margin=2cm \
-            -V fontsize=11pt \
-            -V colorlinks=true \
-            -V linkcolor=black \
-            -V urlcolor=black \
-            -o cv-en.pdf cv-en.md
+          sudo apt-get update -qq
+          sudo apt-get install -qq pandoc \
+            libpango-1.0-0 libpangoft2-1.0-0 libcairo2 libgdk-pixbuf2.0-0 libffi-dev shared-mime-info
+          python3 -m pip install --upgrade pip
+          python3 -m pip install --user 'weasyprint>=63'
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Generate cv-en.docx (pandoc)
+        run: |
+          pandoc cv-en.md -f markdown -t docx -o cv-en.docx
+
+      - name: Generate cv-en.html (pandoc) and cv-en.pdf (WeasyPrint)
+        run: |
+          pandoc cv-en.md -s \
+            --metadata title="Sergio Linares Peralta - CV" \
+            --css=cv-print.css \
+            -o cv-en.html
+          weasyprint cv-en.html cv-en.pdf
 
       - name: List artifacts
-        run: ls -la cv-en.docx cv-en.pdf
+        run: ls -la cv-en.docx cv-en.pdf cv-en.html
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
