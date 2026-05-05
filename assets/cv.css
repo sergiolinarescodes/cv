@@ -114,6 +114,12 @@ body{display:grid;place-items:center;padding:28px}
 .sidebar .sb-foot{margin-top:auto;display:flex;flex-direction:column;gap:6px}
 .sidebar .sb-btn{display:block;width:100%;text-align:center;padding:8px 12px;font-size:11px;letter-spacing:1.2px;margin:0}
 
+/* Language-toggle button label visibility */
+[data-lang-en],[data-lang-es]{display:none}
+body[data-lang="en"] [data-lang-en]{display:inline}
+body[data-lang="es"] [data-lang-es]{display:inline}
+body:not([data-lang]) [data-lang-en]{display:inline}
+
 /* === Terminal (the "TV") - fixed, no perspective === */
 .terminal{
   width:var(--term-w);

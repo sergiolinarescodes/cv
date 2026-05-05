@@ -1,3 +1,164 @@
+// === i18n: English source in HTML, Spanish overrides via dictionary ===
+const ES = {
+  // Sidebar
+  'brand.sub':    'ING. DE SOFTWARE SR. · MADRID',
+  'nav.summary':  '01 · RESUMEN',
+  'nav.experience':'02 · EXPERIENCIA',
+  'nav.projects': '03 · PROYECTOS',
+  'nav.stack':    '04 · STACK',
+  'nav.contact':  '05 · CONTACTO',
+  'sb.cv':        'DESCARGAR CV',
+
+  // Term-bar / foot
+  'bar.title':    'CV.EXE · v2026.05 · MADRID',
+  'bar.nav':      'NAV',
+  'bar.print':    'IMPRIMIR',
+  'foot.pos':     'SECCIÓN 01 / 05',
+  'foot.ready':   'LISTO',
+
+  // Section heads
+  'head.summary':    '01 · Resumen',
+  'head.experience': '02 · Experiencia',
+  'head.projects':   '03 · Proyectos',
+  'head.stack':      '04 · Stack',
+  'head.contact':    '05 · Contacto',
+
+  // Hero
+  'hero.sub':   'INGENIERO DE SOFTWARE SENIOR / TECH LEAD · MADRID, ES · ABIERTO A OFERTAS',
+  'hero.blurb':
+    'Más de 12 años construyendo plataformas SaaS en producción. ' +
+    'Actualmente tech-lead del backend de <b class="hi">FinOps</b> en Maersk: una plataforma ' +
+    'escalable y multi-servicio de facturación para clientes enterprise de logística. ' +
+    'Microservicios .NET event-driven sobre AKS, diseñados para alta disponibilidad, ' +
+    'resiliencia y evolución continua; observabilidad end-to-end con OpenTelemetry. ' +
+    'Responsabilidad directa sobre servicios cara al cliente y decisiones técnicas ' +
+    'alineadas con las necesidades de negocio.',
+
+  'meta.focus':       'ENFOQUE',
+  'meta.cloud':       'CLOUD',
+  'meta.obs':         'OBS',
+  'meta.years':       'AÑOS',
+  'meta.scale':       'ESCALA',
+  'meta.scale-val':   'logística enterprise, multi-tenant',
+
+  'chip.production':    'PRODUCCIÓN SAAS',
+  'chip.observability': 'OBSERVABILIDAD',
+  'chip.current':       'ACTUAL',
+  'chip.eu-consult':    'CONSULTORA UE',
+  'chip.early-career':  'INICIO DE CARRERA',
+  'chip.ddd-saas':      'DDD / SAAS · OPEN SOURCE',
+
+  // Experience
+  'exp.maersk-meta':  'INGENIERO DE SOFTWARE SR. · NOV 2021 → ACTUALIDAD',
+  'exp.finops-title': 'Plataforma FinOps',
+  'exp.finops-meta':  'MAR 2024 → ACTUALIDAD',
+  'exp.finops-blurb':
+    'Tech-lead en una plataforma escalable y multi-servicio de facturación detrás ' +
+    'de clientes enterprise de logística. Sistema multi-tenant en producción con ' +
+    'alta disponibilidad y evolución continua, con decisiones técnicas alineadas ' +
+    'con las necesidades de negocio.',
+
+  'exp.finops.b1': 'Diseño de microservicios .NET event-driven sobre AKS · Service Bus + Kafka, Outbox, consistencia eventual · arquitectura para escalabilidad y resiliencia',
+  'exp.finops.b2': 'Construcción y liderazgo de <b class="hi">CarrierCostProcessor</b> · ingiere, normaliza y proyecta feeds de coste de carriers sobre el modelo de FinOps',
+  'exp.finops.b3': 'Contribución a <b class="hi">Crucible</b> · herramienta interna de FinOps para reconciliación de costes y analítica entre unidades de negocio',
+  'exp.finops.b4': 'Observabilidad end-to-end · collector de OpenTelemetry, Grafana (Loki, Prometheus, Tempo), alertas en GoAlert + Teams',
+  'exp.finops.b5': 'Calidad alta · tests unitarios, de integración y E2E sobre flujos críticos de billing',
+  'exp.finops.b6': 'Liderazgo de un nuevo microservicio para generación de PDFs de factura (backend → object storage), cara al cliente',
+  'exp.finops.b7': 'Modernización de pipelines CI/CD y liderazgo de la migración a Kubernetes (AKS)',
+  'exp.finops.b8': 'Activo en decisiones de evolución de producto y técnica: upgrades, dirección de infra, on-call, mejora continua',
+  'meta.product-decisions': 'PRODUCTO · DECISIONES',
+
+  'exp.trackship-title': 'Equipo TrackShipment',
+  'exp.trackship.b1': 'Onboarding de un cliente logístico mayor sobre las APIs de tracking y etiquetas de envío',
+  'exp.trackship.b2': 'Setup del stack de OpenTelemetry con logs, métricas y trazas estructuradas',
+  'exp.trackship.b3': 'Migración de Azure Web Apps a AKS usando tooling interno',
+  'exp.trackship.b4': 'Upgrades de versión de .NET sobre múltiples servicios',
+  'meta.onboarding': 'ONBOARDING',
+  'meta.upgrades':   'UPGRADES',
+
+  'exp.internal-title': 'Logística interna y app Shopify de envíos',
+  'exp.internal.b1': 'Lead developer en una app Shopify (Laravel + React) para etiquetas de envío · OAuth + integración con APIs internas de Maersk',
+  'exp.internal.b2': 'Liderazgo de la migración PHP → .NET y on-prem → Azure de las APIs de logística interna',
+  'meta.migration':   'MIGRACIÓN',
+
+  'exp.babel-meta': 'SENIOR WEB DEVELOPER · FEB 2019 → NOV 2021',
+  'exp.babel.b1': '<b>E-Quironsalud</b> · Prestashop / Symfony · desarrollo PHP + JS, integraciones API',
+  'exp.babel.b2': '<b>Cosentino B2B/B2C</b> · WordPress · componentes modulares customizables',
+  'exp.babel.b3': '<b>Salud Savia</b> · APIs REST a medida, back-end ElasticSearch, plugins propios para WordPress, integración eCommerce',
+
+  'exp.voila-meta': 'WEB DEVELOPER · 2013 → 2019',
+  'exp.voila-blurb':
+    'PHP, JavaScript, jQuery, NodeJS, Unity (.NET). Plataformas CMS propias, ' +
+    'app de búsqueda de rutas en Google Maps, gestores multimedia y un juego ' +
+    'interactivo de VR.',
+
+  'hint.expand': 'CLIC PARA EXPANDIR',
+
+  // Projects
+  'proj.shipord-meta':  'PERSONAL · MODULAR MONOLITH .NET 10',
+  'proj.shipord-blurb':
+    'Arquitectura de referencia open-source para una plataforma SaaS de envíos ' +
+    'multi-tenant. Domain-Driven Design con separación CQRS de lectura ' +
+    '(Operations vs Customer), Wolverine sobre AWS SQS + SNS para mensajería y ' +
+    'sagas, PostgreSQL (compatible con Aurora), patrón connector para ' +
+    'Shopify / WooCommerce / PostNL, tres hosts desplegables ' +
+    '(PublicApi, PrivateApi, Worker), OpenTelemetry completo.',
+  'proj.view-repo':     'VER REPO →',
+
+  'proj.ccp-meta':      'MAERSK · FINOPS · 2024 →',
+  'proj.ccp-blurb':
+    'Servicio que ingiere feeds de coste de carriers, los normaliza y los ' +
+    'proyecta sobre el modelo de coste de FinOps. Impacto directo en cliente ' +
+    'vía facturación enterprise más precisa.',
+
+  'proj.crucible-meta': 'MAERSK · FINOPS · HERRAMIENTA INTERNA',
+  'proj.crucible-blurb':
+    'Herramienta interna de FinOps para reconciliación de costes y analítica ' +
+    'entre unidades de negocio. Da soporte a la capa de datos que dirige las ' +
+    'decisiones financieras entre equipos.',
+
+  // Stack
+  'stack.backend':  'BACKEND',
+  'stack.event':    'EVENT-DRIVEN E INTEGRACIÓN',
+  'stack.data':     'DATOS',
+  'stack.cloud':    'CLOUD Y OBSERVABILIDAD',
+  'stack.frontend': 'FRONTEND',
+  'stack.method':   'METODOLOGÍA',
+  'stack.ai':       'TOOLING DE IA',
+
+  // Contact
+  'contact.direct':    'DIRECTO',
+  'contact.email':     'EMAIL',
+  'contact.phone':     'TELÉFONO',
+  'contact.location':  'UBICACIÓN',
+  'contact.status':    'ESTADO',
+  'contact.open':      'ABIERTO A OFERTAS',
+  'contact.links':     'ENLACES',
+  'contact.showcase':  'VITRINA',
+  'contact.languages': 'IDIOMAS',
+  'lang.es':           'Español · nativo',
+  'lang.en':           'Inglés · profesional',
+  'contact.eof':       'FIN DE ARCHIVO',
+  'contact.eof-line':  '\n$ sergio --disponible\n> listo para empezar.\n',
+};
+
+const i18nNodes = new Map();   // node -> original English innerHTML
+function applyLang(lang){
+  document.body.dataset.lang = lang;
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    if (!i18nNodes.has(el)) i18nNodes.set(el, el.innerHTML);
+    if (lang === 'es' && Object.prototype.hasOwnProperty.call(ES, el.dataset.i18n)){
+      el.innerHTML = ES[el.dataset.i18n];
+    } else {
+      el.innerHTML = i18nNodes.get(el);
+    }
+  });
+  try{ localStorage.setItem('cv-lang', lang); }catch(e){}
+  // Update section position label after switching (translates "SECTION → SECCIÓN")
+  if (typeof refreshSectionLabel === 'function') refreshSectionLabel();
+}
+
 // === Boot sequence ===
 const BOOT_LINES = [
   '$ ./cv.exe --user="sergio.linares"',
@@ -84,12 +245,21 @@ async function showSection(id, { force=false } = {}){
   // (driven by the .section.active CSS rules).
   sections.forEach(s => s.classList.toggle('active', s.id === id));
   setActiveTab(id);
-  if (posEl) posEl.textContent = `SECTION ${String(idx).padStart(2,'0')} / ${String(total).padStart(2,'0')}`;
+  setSectionLabel(idx, total);
   const content = document.querySelector('.term-content');
   if (content) content.scrollTop = 0;
   currentId = id;
   await typePrompt(SECTION_CMDS[id] || `cat ${id}.md`);
 }
+
+let _lastIdx = 1, _lastTotal = 5;
+function setSectionLabel(idx, total){
+  _lastIdx = idx; _lastTotal = total;
+  if (!posEl) return;
+  const word = (document.body.dataset.lang === 'es') ? 'SECCIÓN' : 'SECTION';
+  posEl.textContent = `${word} ${String(idx).padStart(2,'0')} / ${String(total).padStart(2,'0')}`;
+}
+function refreshSectionLabel(){ setSectionLabel(_lastIdx, _lastTotal); }
 
 function typePrompt(cmd){
   if (!promptCmdEl) return Promise.resolve();
@@ -137,6 +307,17 @@ function afterBoot(){
 
   // Print button
   document.querySelector('[data-action="print"]')?.addEventListener('click', ()=>window.print());
+
+  // Language toggle
+  document.querySelector('[data-action="toggle-lang"]')?.addEventListener('click', ()=>{
+    const next = document.body.dataset.lang === 'es' ? 'en' : 'es';
+    applyLang(next);
+  });
+  // Restore saved language
+  try{
+    const saved = localStorage.getItem('cv-lang');
+    if (saved === 'es' || saved === 'en') applyLang(saved);
+  }catch(e){}
 
   // Honor URL hash on load
   const hash = location.hash.replace('#','');
