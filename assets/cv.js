@@ -26,22 +26,23 @@ const ES = {
   // Hero
   'hero.sub':   'INGENIERO DE SOFTWARE SENIOR / TECH LEAD · MADRID, ES · ABIERTO A OFERTAS',
   'hero.blurb':
-    'Más de 12 años construyendo plataformas SaaS en producción. ' +
+    'Más de 12 años construyendo plataformas a gran escala en producción. ' +
     'Actualmente tech-lead del backend de <b class="hi">FinOps</b> en Maersk: una plataforma ' +
-    'escalable y multi-servicio de facturación para clientes enterprise de logística. ' +
-    'Microservicios .NET event-driven sobre AKS, diseñados para alta disponibilidad, ' +
-    'resiliencia y evolución continua; observabilidad end-to-end con OpenTelemetry. ' +
-    'Responsabilidad directa sobre servicios cara al cliente y decisiones técnicas ' +
-    'alineadas con las necesidades de negocio.',
+    'escalable y multi-servicio de facturación para clientes enterprise de logística, ' +
+    'procesando <b class="hi">más de 1M de líneas de factura al día</b> a través de ' +
+    '<b class="hi">más de 30 integraciones de carriers</b>. Microservicios .NET event-driven ' +
+    'sobre AKS, diseñados para alta disponibilidad, resiliencia y evolución continua; ' +
+    'observabilidad end-to-end con OpenTelemetry. Responsabilidad directa sobre servicios ' +
+    'cara al cliente y decisiones técnicas alineadas con las necesidades de negocio.',
 
   'meta.focus':       'ENFOQUE',
   'meta.cloud':       'CLOUD',
   'meta.obs':         'OBS',
   'meta.years':       'AÑOS',
   'meta.scale':       'ESCALA',
-  'meta.scale-val':   'logística enterprise, multi-tenant',
+  'meta.scale-val':   '1M+ líneas de factura/día · 30+ carriers',
 
-  'chip.production':    'PRODUCCIÓN SAAS',
+  'chip.production':    'ESCALA EN PRODUCCIÓN',
   'chip.observability': 'OBSERVABILIDAD',
   'chip.current':       'ACTUAL',
   'chip.eu-consult':    'CONSULTORA UE',
@@ -54,13 +55,14 @@ const ES = {
   'exp.finops-meta':  'MAR 2024 → ACTUALIDAD',
   'exp.finops-blurb':
     'Tech-lead en una plataforma escalable y multi-servicio de facturación detrás ' +
-    'de clientes enterprise de logística. Sistema multi-tenant en producción con ' +
-    'alta disponibilidad y evolución continua, con decisiones técnicas alineadas ' +
-    'con las necesidades de negocio.',
+    'de clientes enterprise de logística, procesando más de 1M de líneas de factura ' +
+    'al día a través de más de 30 integraciones de carriers. Sistema multi-tenant en ' +
+    'producción con alta disponibilidad y evolución continua, con decisiones técnicas ' +
+    'alineadas con las necesidades de negocio.',
 
   'exp.finops.b1': 'Diseño de microservicios .NET event-driven sobre AKS · Service Bus + Kafka, Outbox, consistencia eventual · arquitectura para escalabilidad y resiliencia',
-  'exp.finops.b2': 'Lead developer y arquitecto de <b class="hi">CarrierCostProcessor</b> · ingesta vía FTP de ficheros de coste de carriers, onboarding con patrón builder (con asistencia de IA), Outbox + Kafka con Schema Registry, y andamiaje de tests E2E + integración generado automáticamente por carrier',
-  'exp.finops.b3': 'Lead developer y arquitecto de <b class="hi">Crucible</b> · plataforma genérica .NET 10 de procesamiento de eventos que consume feeds de CCP por Kafka y produce líneas de factura en la BD compartida de FinOps; CQRS, EF Core, OpenTelemetry, tests E2E con Testcontainers',
+  'exp.finops.b2': 'Lead developer y arquitecto de <b class="hi">CarrierCostProcessor</b> · <b class="hi">30+ carriers</b> integrados alimentando <b class="hi">1M+ líneas de factura/día</b> · ingesta vía FTP de ficheros de coste de carriers, onboarding con patrón builder (con asistencia de IA), Outbox + Kafka con Schema Registry, y andamiaje de tests E2E + integración generado automáticamente por carrier',
+  'exp.finops.b3': 'Lead developer y arquitecto de <b class="hi">Crucible</b> · plataforma genérica .NET 10 de procesamiento de eventos que consume feeds de CCP por Kafka y produce líneas de factura en la BD compartida de FinOps · reducción del procesamiento de <b class="hi">3h a 30min</b> y, con la visibilidad y monitorización añadidas, <b class="hi">50%</b> menos de tickets de soporte · CQRS, EF Core, OpenTelemetry, tests E2E con Testcontainers',
   'exp.finops.b4': 'Observabilidad end-to-end · collector de OpenTelemetry, Grafana (Loki, Prometheus, Tempo), alertas en GoAlert + Teams',
   'exp.finops.b5': 'Calidad alta · tests unitarios, de integración y E2E sobre flujos críticos de billing',
   'exp.finops.b6': 'Liderazgo de un nuevo microservicio para generación de PDFs de factura (backend → object storage), cara al cliente',
@@ -107,7 +109,9 @@ const ES = {
 
   'proj.ccp-meta':      'MAERSK · FINOPS · LEAD DEVELOPER Y ARQUITECTO',
   'proj.ccp-blurb':
-    'Servicio de ingesta de costes de carriers. Lead developer y arquitecto: ' +
+    'Servicio de ingesta de costes de carriers, <b class="hi">30+ carriers</b> ' +
+    'integrados y alimentando <b class="hi">1M+ líneas de factura al día</b>. ' +
+    'Lead developer y arquitecto: ' +
     'diseño del pipeline de ingesta de ficheros desde <b class="hi">FTP</b> con ' +
     '<b class="hi">patrón builder</b> para onboarding plug-and-play de nuevos ' +
     'carriers (incluida integración asistida por IA). Patrón ' +
@@ -120,7 +124,11 @@ const ES = {
   'proj.crucible-meta': 'MAERSK · FINOPS · LEAD DEVELOPER Y ARQUITECTO',
   'proj.crucible-blurb':
     'Plataforma genérica de procesamiento de eventos para FinOps en .NET 10. ' +
-    'Lead developer y arquitecto: diseño de la arquitectura por capas sobre ' +
+    'Lead developer y arquitecto: sustituí un cuello de botella de ' +
+    '<b class="hi">3 horas</b> de procesamiento por una pipeline de ' +
+    '<b class="hi">30 minutos</b> y, con la visibilidad y monitorización que ' +
+    'aportó, reduje los tickets de soporte un <b class="hi">50%</b>. ' +
+    'Diseño de la arquitectura por capas sobre ' +
     'los patrones existentes de FinOps (Domain / Application / Infrastructure ' +
     '/ Pipelines / Api / Worker), CQRS vía mediator, EF Core code-first, ' +
     'OpenTelemetry y tests E2E con Testcontainers. La primera pipeline ' +

@@ -5,14 +5,15 @@ Web: https://sergiolinarescodes.github.io/cv/
 
 ## Resumen
 Senior Software Engineer / Tech Lead con más de 12 años construyendo
-plataformas tipo SaaS en producción. Actualmente lidero servicios
+plataformas a gran escala en producción. Actualmente lidero servicios
 backend de FinOps en Maersk: una plataforma escalable y multi-servicio
-que da soporte a la facturación para clientes enterprise de logística.
-Mi día a día son microservicios .NET event-driven diseñados para alta
-disponibilidad, resiliencia y evolución continua, observabilidad
-end-to-end con OpenTelemetry y Kubernetes sobre AKS. Responsabilidad
-directa sobre sistemas con impacto directo en cliente y decisiones
-técnicas alineadas con las necesidades de negocio.
+que da soporte a la facturación para clientes enterprise de logística,
+procesando más de 1M de líneas de factura al día a través de más de 30
+integraciones de carriers. Mi día a día son microservicios .NET
+event-driven diseñados para alta disponibilidad, resiliencia y evolución
+continua, observabilidad end-to-end con OpenTelemetry y Kubernetes sobre
+AKS. Responsabilidad directa sobre sistemas con impacto directo en
+cliente y decisiones técnicas alineadas con las necesidades de negocio.
 
 ## Stack
 .NET 8/10, C#, microservicios, event-driven (Azure Service Bus, Kafka,
@@ -28,29 +29,33 @@ Tooling de IA: Claude Code, GitHub Copilot.
 
 **Plataforma FinOps · Mar 2024 a Actualidad**
 Tech-lead en una plataforma escalable y multi-servicio de facturación
-en logística y e-commerce. Sistema multi-tenant en producción, alta
-disponibilidad y evolución continua, con decisiones técnicas alineadas
-con las necesidades de negocio.
+en logística y e-commerce, procesando más de 1M de líneas de factura al
+día a través de más de 30 integraciones de carriers. Sistema
+multi-tenant en producción, alta disponibilidad y evolución continua,
+con decisiones técnicas alineadas con las necesidades de negocio.
 
 - Diseño e implementación de microservicios .NET event-driven sobre
   AKS, con Azure Service Bus + Kafka, patrón Outbox y consistencia
   eventual. Arquitectura para escalabilidad, resiliencia y evolución
   continua.
-- Lead developer y arquitecto de **CarrierCostProcessor**: ingesta vía
-  FTP de ficheros de coste de carriers, onboarding con patrón builder
-  para nuevos carriers (con integraciones asistidas por IA), patrón
-  Outbox que produce eventos normalizados a Kafka con contratos
-  gestionados vía Schema Registry, y andamiaje de tests E2E + de
-  integración generado automáticamente por carrier, de forma que cada
-  integración viaja con su propia red de seguridad.
+- Lead developer y arquitecto de **CarrierCostProcessor**: 30+ carriers
+  integrados alimentando 1M+ líneas de factura al día. Ingesta vía FTP
+  de ficheros de coste de carriers, onboarding con patrón builder para
+  nuevos carriers (con integraciones asistidas por IA), patrón Outbox
+  que produce eventos normalizados a Kafka con contratos gestionados vía
+  Schema Registry, y andamiaje de tests E2E + de integración generado
+  automáticamente por carrier, de forma que cada integración viaja con
+  su propia red de seguridad.
 - Lead developer y arquitecto de **Crucible**: plataforma genérica
-  .NET 10 de procesamiento de eventos para FinOps. Arquitectura por
-  capas (Domain / Application / Infrastructure / Pipelines / Api /
-  Worker), CQRS vía mediator, EF Core code-first, OpenTelemetry y
-  tests E2E con Testcontainers. La primera pipeline consume feeds de
-  CCP por Kafka y escribe líneas de factura en la BD compartida de
-  FinOps, con atribución de enriquecimiento por campo, estado
-  tridimensional de evento (procesamiento / calidad / decisión de
+  .NET 10 de procesamiento de eventos para FinOps. Reduje el
+  procesamiento de 3 horas a 30 minutos y, con la visibilidad y
+  monitorización añadidas, bajé los tickets de soporte un 50%.
+  Arquitectura por capas (Domain / Application / Infrastructure /
+  Pipelines / Api / Worker), CQRS vía mediator, EF Core code-first,
+  OpenTelemetry y tests E2E con Testcontainers. La primera pipeline
+  consume feeds de CCP por Kafka y escribe líneas de factura en la BD
+  compartida de FinOps, con atribución de enriquecimiento por campo,
+  estado tridimensional de evento (procesamiento / calidad / decisión de
   negocio) y lineage completo. Construida lo bastante genérica para
   absorber futuras pipelines de revenue y reconciliación.
 - Responsable de la observabilidad end-to-end con el collector de

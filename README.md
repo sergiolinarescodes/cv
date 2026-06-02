@@ -2,7 +2,8 @@
 
 Senior Software Engineer based in Madrid. Currently leading FinOps
 backend services at Maersk: event-driven .NET microservices, AKS,
-OpenTelemetry, multi-tenant SaaS-style production systems.
+OpenTelemetry, multi-tenant production systems processing 1M+ invoice
+lines a day across 30+ carrier integrations.
 
 - [English version](./cv-en.md)
 - [Versión en español](./cv-es.md)

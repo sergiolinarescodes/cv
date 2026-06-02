@@ -4,10 +4,11 @@ sergiolinaresperalta@gmail.com · +34 622 76 16 36
 Web: https://sergiolinarescodes.github.io/cv/
 
 ## Summary
-Senior Software Engineer / Tech Lead with 12+ years building production
-SaaS-style platforms. Currently leading FinOps backend services at
+Senior Software Engineer / Tech Lead with 12+ years building large-scale
+production platforms. Currently leading FinOps backend services at
 Maersk: a scalable, multi-service platform powering invoicing for
-enterprise logistics customers. Day to day I work on event-driven .NET
+enterprise logistics customers, processing 1M+ invoice lines a day
+across 30+ carrier integrations. Day to day I work on event-driven .NET
 microservices designed for high availability, resilience and continuous
 evolution, end-to-end observability with OpenTelemetry, and Kubernetes
 on AKS. Direct ownership of customer-facing systems and technical
@@ -27,22 +28,26 @@ AI tooling: Claude Code, GitHub Copilot.
 
 **FinOps platform · Mar 2024 to Present**
 Tech-lead on a scalable, multi-service invoicing platform across
-logistics and e-commerce. High-availability, multi-tenant production
-system in continuous evolution, with technical decisions aligned with
-business needs.
+logistics and e-commerce, processing 1M+ invoice lines a day across 30+
+carrier integrations. High-availability, multi-tenant production system
+in continuous evolution, with technical decisions aligned with business
+needs.
 
 - Designed and shipped event-driven .NET microservices on AKS, using
   Azure Service Bus + Kafka with the Outbox pattern and eventual
   consistency. Architected for scalability, resilience and continuous
   evolution.
-- Lead developer and architect of **CarrierCostProcessor**: FTP-based
-  ingestion of carrier cost files, builder-pattern onboarding for new
-  carriers (with AI-assisted integrations), Outbox producing
-  normalised events to Kafka under Schema Registry contracts, and
-  automated E2E + integration test scaffolding generated per carrier
-  so each integration ships with its own safety net.
+- Lead developer and architect of **CarrierCostProcessor**: integrated
+  30+ carriers feeding 1M+ invoice lines a day. FTP-based ingestion of
+  carrier cost files, builder-pattern onboarding for new carriers (with
+  AI-assisted integrations), Outbox producing normalised events to
+  Kafka under Schema Registry contracts, and automated E2E +
+  integration test scaffolding generated per carrier so each
+  integration ships with its own safety net.
 - Lead developer and architect of **Crucible**: a .NET 10 generic
-  event-processing platform for FinOps. Layered architecture
+  event-processing platform for FinOps. Cut end-to-end processing from
+  3 hours to 30 minutes and, with the added visibility and monitoring,
+  reduced support tickets by 50%. Layered architecture
   (Domain / Application / Infrastructure / Pipelines / Api / Worker),
   CQRS via mediator, EF Core code-first migrations, OpenTelemetry,
   Testcontainers-backed E2E tests. First pipeline consumes CCP feeds
